@@ -7,6 +7,10 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     
 }
@@ -24,6 +28,8 @@
     padding: 16px 16px;
     grid-row: 1 / 2;
     grid-column: 4/ 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 ul{
     margin: 0;
@@ -58,4 +64,10 @@ ul li a:hover{
     font-size: 18px;
     color: rgb(3, 3, 3);
 
+}
+body{
+    background-color: rgb(244, 237, 237);
+    text-align: center;
+    text-decoration: none;
+    font-family: times new roman;
 }
