@@ -1,8 +1,14 @@
 .header{
-    background-color: #e7249d;
+   
     padding: 20px;
     text-align: center;
-    color: rgb(3, 3, 3);
+    color: rgb(174, 14, 14);
+    background-image:url('../Images/pk5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    
 }
 .header h1{
     font-size: 36px;
@@ -42,7 +48,14 @@ ul li a{
     
 }
 ul li a:hover{
-    background-color: #e7249d;
+    background-color:rgb(174, 14, 14);;
     color: white;
     border-radius: 4px;
+}
+.content{
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(3, 3, 3);
+
 }
