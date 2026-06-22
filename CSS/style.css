@@ -84,8 +84,8 @@ html{
 
 [data-theme="dark"] {
     --bg-color: #333;
-    --text-color: #fff;
+    --text-color: rgb(3,3,3);
     --h1-bg: rgba(0, 0, 0, 0.9);
-    --bonita-red: #ff4d4d;
+    --bonita-red: #b30000;
 }
 

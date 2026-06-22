@@ -1,4 +1,7 @@
-const toggleButton = document.getElementById('theme-toggle');
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('theme-toggle');
+    if (!toggleButton) return;
+    
 const currentTheme = localStorage.getItem('theme');
 
 if (currentTheme === 'dark') {
@@ -21,4 +24,4 @@ toggleButton.addEventListener('click', () => {
         toggleButton.textContent = '🌙 Dark Mode';
         localStorage.setItem('theme', 'light');
     }
-});
+});});
