@@ -69,7 +69,23 @@ body{
     text-align: center;
     text-decoration: none;
     font-family: times new roman;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 html{
  scroll-behavior: smooth;
 }
+/* Dark mode styles */
+:root {
+    --bg-color: #ffffff;
+    --text-color: rgb(3, 3, 3);
+    --h1-bg: rgba(255, 255, 255, 0.9); 
+    --bonita-red: #b30000;
+}
+
+[data-theme="dark"] {
+    --bg-color: #333;
+    --text-color: #fff;
+    --h1-bg: rgba(0, 0, 0, 0.9);
+    --bonita-red: #ff4d4d;
+}
+
