@@ -94,4 +94,10 @@ html{
     --h1-bg: rgba(0, 0, 0, 0.9);
     --bonita-red: #b30000;
 }
-
+.footer{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
