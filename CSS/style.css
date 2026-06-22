@@ -26,8 +26,7 @@
     float: none;
     text-decoration: none;
     padding: 16px 16px;
-    grid-row: 1 / 2;
-    grid-column: 4/ 2;
+   
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
 }
