@@ -2,7 +2,7 @@
    
     padding: 20px;
     text-align: center;
-    color: rgb(174, 14, 14);
+    color: var(--bonita-red);
     background-image:url('../Images/pk5.png');
     background-size: cover;
     background-position: center;
@@ -16,10 +16,13 @@
 }
 .header h1{
     font-size: 36px;
+    padding: 6px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
    
 }
 .navbar{
-    background-color: #f2f2f2;;
+    background-color: var(--bg-color);
     overflow: hidden;
     text-align: center;
     display:flex;
@@ -46,26 +49,29 @@ ul li{
     font-size: 18px;
 }
 ul li a{
-    color: rgb(3, 3, 3);
+    color: var(--text-color);
     text-decoration: none;
     padding: 8px 16px;
     transition: all 0.3s ease;
     
 }
 ul li a:hover{
-    background-color:rgb(174, 14, 14);;
-    color: white;
+    background-color:var(--bonita-red);
+    color: var(--bg-color);
     border-radius: 4px;
 }
 .content{
     padding: 20px;
     text-align: center;
     font-size: 18px;
-    color: rgb(3, 3, 3);
+    color: var(--text-color);
 
 }
 body{
-    background-color: rgb(244, 237, 237);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
     text-align: center;
     text-decoration: none;
     font-family: times new roman;
@@ -84,8 +90,8 @@ html{
 
 [data-theme="dark"] {
     --bg-color: #333;
-    --text-color: rgb(3,3,3);
+    --text-color:#0c0c0c;
     --h1-bg: rgba(0, 0, 0, 0.9);
-    --bonita-red: #b30000;
+    --bonita-red: #ff4d4d;
 }
 
