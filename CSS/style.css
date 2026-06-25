@@ -29,6 +29,9 @@
     float: none;
     text-decoration: none;
     padding: 16px 16px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
    
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
@@ -65,6 +68,7 @@ ul li a:hover{
     text-align: center;
     font-size: 18px;
     color: var(--text-color);
+    background-color: var(--bg-color);
 
 }
 body{
@@ -76,6 +80,7 @@ body{
     text-decoration: none;
     font-family: times new roman;
     transition: background-color 0.3s ease, color 0.3s ease;
+    opacity: none;
 }
 html{
  scroll-behavior: smooth;
@@ -90,7 +95,7 @@ html{
 
 [data-theme="dark"] {
     --bg-color: #333;
-    --text-color:#0c0c0c;
+    --text-color:#fffbfb;
     --h1-bg: rgba(0, 0, 0, 0.9);
     --bonita-red: #b30000;
 }
@@ -100,4 +105,5 @@ html{
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+    border-top: none;
 }
