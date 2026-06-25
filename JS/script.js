@@ -6,10 +6,10 @@ const currentTheme = localStorage.getItem('theme');
 
 if (currentTheme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
-    toggleButton.textContent = '☀️ Light Mode';
+    toggleButton.textContent = '☀️';
 } else {
     document.documentElement.setAttribute('data-theme', 'light');
-    toggleButton.textContent = '🌙 Dark Mode';
+    toggleButton.textContent = '🌙 ';
 }
 
 toggleButton.addEventListener('click', () => {
@@ -17,11 +17,11 @@ toggleButton.addEventListener('click', () => {
     
     if (theme === 'light') {
         document.documentElement.setAttribute('data-theme', 'dark');
-        toggleButton.textContent = '☀️ Light Mode';
+        toggleButton.textContent = '☀️';
         localStorage.setItem('theme', 'dark');
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
-        toggleButton.textContent = '🌙 Dark Mode';
+        toggleButton.textContent = '🌙 ';
         localStorage.setItem('theme', 'light');
     }
 });});
