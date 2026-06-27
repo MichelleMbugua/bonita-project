@@ -107,6 +107,7 @@ html{
     padding: 20px;
     margin-top: 20px;
     border-top: none;
+    background-color: var(--bonita-red);
 }
     #theme-toggle {
     background: none;
