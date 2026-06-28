@@ -34,12 +34,13 @@
     font-family: times new roman;
     box-shadow: 0 4px 8px var(--shadow-color);
     overflow-x: auto;
+    scrollbar-width: none; 
 }
 .menu ul {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    overflow-x: auto;
+    overflow-x:auto;
     flex-shrink: 0;
     list-style: none;
     padding: 0;
@@ -164,6 +165,7 @@ html{
         padding: 10px;
     }
 }
+/* --- GALLERY --- */
 .catalog {
     display: flex;
     flex-wrap: wrap;
@@ -304,7 +306,6 @@ html{
     top: -5px;
 }
 
-/* Services section*/
 
 /* --- Call to Action Button --- */
 .btn-primary {
@@ -323,6 +324,7 @@ html{
 .btn-primary:hover {
     background-color: var(--bonita-red);
 }
+/* --- Testimonials Section --- */
 
 .client-pfp img {
     width: 50px;
@@ -376,4 +378,32 @@ html{
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.job-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+/* careers  */
+.job-card {
+    background: var(--bg-color);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    border-top: 4px solid var(--bonita-red);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.apply-box {
+    background:var(--bg-color);
+    color: var(--text-color);
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 40px;
 }
