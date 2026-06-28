@@ -72,3 +72,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Contact Form Validation
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".contact-form form");
+
+    if (form) {
+        form.addEventListener("submit", (event) => {
+            // Fetch form inputs
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            // Validation flag
+            let isValid = true;
+            let errorMessage = "";
+
+            //  Name Validation
+            if (name.length < 2) {
+                isValid = false;
+                errorMessage += "Please enter a valid name (at least 2 characters).\n";
+            }
+
+            //  Email Validation 
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                isValid = false;
+                errorMessage += "Please enter a valid email address.\n";
+            }
+
+            // Phone Number Validation 
+            const phoneRegex = /^(?:\+254|0)[17]\d{8}$/;
+            if (!phoneRegex.test(phone.replace(/\s+/g, ''))) { // removes spaces for checking
+                isValid = false;
+                errorMessage += "Please enter a valid Kenyan phone number (e.g., 0700123456).\n";
+            }
+
+            //  Message Validation
+            if (message.length < 10) {
+                isValid = false;
+                errorMessage += "Your message must be at least 10 characters long.\n";
+            }
+
+            // If any check fails, block submission and alert the user
+            if (!isValid) {
+                event.preventDefault(); // Stops form from submitting to submit_form.php
+                alert(errorMessage);
+            }
+        });
+    }
+});
