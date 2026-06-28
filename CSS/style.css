@@ -32,7 +32,7 @@
     flex-direction: row;
     justify-content: flex-start;
     font-family: times new roman;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--shadow-color);
     overflow-x: auto;
 }
 .menu ul {
@@ -111,14 +111,16 @@ html{
     --h1-bg: rgba(255, 255, 255, 0.9); 
     --bonita-red: #b30000;
     --star-color: #ffcc00;
+    --shadow-color: #d3d3d3;
 }
 
 [data-theme="dark"] {
-    --bg-color: #333;
+    --bg-color: #1A1A1A;
     --text-color:#fffbfb;
     --h1-bg: rgba(0, 0, 0, 0.9);
     --bonita-red: #b30000;
     --star-color: #ffcc00;
+    --shadow-color: #2c2d2e;
 }
 
 
@@ -240,7 +242,7 @@ html{
     background-color: var(--bg-color);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 15px var(--text-color);
+    box-shadow: 0 5px 15px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -248,7 +250,7 @@ html{
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px var(--text-color);
+    box-shadow: 0 10px 20px var(--shadow-color);
 }
 
 .service-card img {
@@ -333,7 +335,7 @@ html{
     background-color: var(--bg-color);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px var(--text-color);
+    box-shadow: 0 4px 10px var(--shadow-color);
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
@@ -356,7 +358,7 @@ html{
     background-color: var(--bg-color);
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px var(--text-color);
+    box-shadow: 0 4px 10px var(--shadow-color);
     text-align: center;
     transition: transform 0.3s ease;
 }
