@@ -30,8 +30,8 @@ toggleButton.addEventListener('click', () => {
 // Wait for the page to load completely before running the script
 document.addEventListener('DOMContentLoaded', () => {
     
-    const filterLinks = document.querySelectorAll('.filter-menu a');
-    const galleryItems = document.querySelectorAll('.category-list ');
+    const filterLinks = document.querySelectorAll('.category-list a');
+    const galleryItems = document.querySelectorAll('.gallery-item'); 
 
     // Only run if we are actually on the gallery page
     if (filterLinks.length > 0) {
