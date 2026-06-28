@@ -126,7 +126,7 @@ html{
 
     #theme-toggle {
     background: none;
-    border-radius: 50%;
+    border: none;
     padding: 0;
     
     cursor: pointer;

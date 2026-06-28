@@ -1,31 +1,37 @@
+// Dark and Light Mode
 document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('theme-toggle');
-    if (!toggleButton) return;
+const toggleButton = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
     
-const currentTheme = localStorage.getItem('theme');
-
-if (currentTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    toggleButton.textContent = '☀️';
-} else {
-    document.documentElement.setAttribute('data-theme', 'light');
-    toggleButton.textContent = '🌙 ';
-}
-
-toggleButton.addEventListener('click', () => {
-    let theme = document.documentElement.getAttribute('data-theme');
+    if (!toggleButton || !themeIcon) return;
     
-    if (theme === 'light') {
+    const currentTheme = localStorage.getItem('theme');
+
+    
+    if (currentTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
-        toggleButton.textContent = '☀️';
-        localStorage.setItem('theme', 'dark');
+        if (themeIcon) themeIcon.textContent = 'light_mode'; // Sun icon shows when system is dark
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
-        toggleButton.textContent = '🌙 ';
-        localStorage.setItem('theme', 'light');
+        if (themeIcon) themeIcon.textContent = 'dark_mode';  // Moon icon shows when system is light
     }
-});});
 
+
+    toggleButton.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme');
+        
+        if (theme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            if (themeIcon) themeIcon.textContent = 'light_mode';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            if (themeIcon) themeIcon.textContent = 'dark_mode';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
+// Gallery Filtering
 
 // Wait for the page to load completely before running the script
 document.addEventListener('DOMContentLoaded', () => {
@@ -41,16 +47,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Prevent the link from jumping to the top of the page
                 e.preventDefault();
 
-                // 1. Remove the "active" styling from all buttons
+                //  Remove the "active" styling from all buttons
                 filterLinks.forEach(item => item.classList.remove('active'));
                 
-                // 2. Add the "active" styling to the button that was just clicked
+                //  Add the "active" styling to the button that was just clicked
                 this.classList.add('active');
 
-                // 3. Get the category we want to filter by
+                //  Get the category we want to filter by
                 const selectedCategory = this.getAttribute('data-category');
 
-                // 4. Loop through all gallery items to show or hide them
+                //  Loop through all gallery items to show or hide them
                 galleryItems.forEach(item => {
                     const itemCategory = item.getAttribute('data-category');
 
