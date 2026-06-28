@@ -101,6 +101,7 @@ html{
     --text-color: rgb(3, 3, 3);
     --h1-bg: rgba(255, 255, 255, 0.9); 
     --bonita-red: #b30000;
+    --star-color: #ffcc00;
 }
 
 [data-theme="dark"] {
@@ -108,6 +109,7 @@ html{
     --text-color:#fffbfb;
     --h1-bg: rgba(0, 0, 0, 0.9);
     --bonita-red: #b30000;
+    --star-color: #ffcc00;
 }
 
 
@@ -307,4 +309,26 @@ html{
 
 .btn-primary:hover {
     background-color: var(--bonita-red);
+}
+
+.client-pfp img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Makes the image a perfect circle */
+    object-fit: cover;
+}
+
+.testimonial-card {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--text-color);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+.stars{
+    color: var(--star-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
