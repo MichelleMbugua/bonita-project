@@ -293,6 +293,8 @@ html{
     top: -5px;
 }
 
+/* Services section*/
+
 /* --- Call to Action Button --- */
 .btn-primary {
     display: block;
@@ -335,6 +337,31 @@ html{
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Team Section --- */
+.team-member {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--text-color);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px auto; /* Centers the image and adds space below */
+    display: block; /* helps with centering */
+}
+.team-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
